@@ -22,6 +22,7 @@ extern FILE *sFile;
 static char prebuf=0;	//buffer to store the pre-read character
 static char tokenStr[MAXTOKENLEN];	//token buffer
 static int tokenLen;
+static int log = 0;
 
 TERMINAL nextToken()
 {
@@ -83,9 +84,10 @@ TERMINAL nextToken()
 		{	printf("Unknown symbol: %c\n",c);
 			break;
 		}
-		//printf("- state %d\n",state);
-		//printf("%c\n",c);
-		//printf("- tokenLen %d | tokenStr %s\n",tokenLen,tokenStr);
+		if(log==1){
+			//printf("%c\n",c);
+			printf("- state %3d | tokenLen %d | tokenStr %s\n",state,tokenLen,tokenStr);
+		}
 		if (state<100) continue;
 		if (state>100 && state<200)
 		{	prebuf=c;
@@ -139,7 +141,9 @@ TERMINAL nextToken()
 		}
 		break;
 	}
-	//printf("--- token: %d\n",token.token);
+	if(log==1){
+		printf("--- token: %d\n",token.token);
+	}
 	return(token);
 }
 

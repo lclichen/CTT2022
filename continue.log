@@ -1,0 +1,701 @@
+- state   5 | tokenLen 1 | tokenStr m
+- state   5 | tokenLen 2 | tokenStr ma
+- state   5 | tokenLen 3 | tokenStr mai
+- state   5 | tokenLen 4 | tokenStr main
+- state 105 | tokenLen 5 | tokenStr main(
+--- token: 2
+- match lookahead.token=2 | t=2
+- state 205 | tokenLen 1 | tokenStr (ain
+--- token: 21
+SYN: FUNC-->main() {S}
+- match lookahead.token=21 | t=21
+- state 205 | tokenLen 1 | tokenStr )ain
+--- token: 22
+- match lookahead.token=22 | t=22
+- state 201 | tokenLen 1 | tokenStr 
+ain
+- state 205 | tokenLen 1 | tokenStr {ain
+--- token: 23
+- match lookahead.token=23 | t=23
+- state 201 | tokenLen 1 | tokenStr  ain
+- state   5 | tokenLen 1 | tokenStr iain
+- state   5 | tokenLen 2 | tokenStr inin
+- state   5 | tokenLen 3 | tokenStr intn
+- state 105 | tokenLen 4 | tokenStr int 
+--- token: 56
+SYN: S-->D S
+SYN: D-->T id [=E] L;
+SYN: T-->int
+- match lookahead.token=56 | t=56
+- state 201 | tokenLen 1 | tokenStr  nt
+- state   5 | tokenLen 1 | tokenStr int
+- state 105 | tokenLen 2 | tokenStr i=t
+--- token: 2
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr =1t
+--- token: 27
+- match lookahead.token=27 | t=27
+- state   4 | tokenLen 1 | tokenStr 11t
+- state 104 | tokenLen 2 | tokenStr 1,t
+--- token: 1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ,,t
+--- token: 25
+SYN: TE1--> 
+SYN: E1--> 
+SYN: L-->, id [=E] L
+- match lookahead.token=25 | t=25
+- state   5 | tokenLen 1 | tokenStr j,t
+- state 105 | tokenLen 2 | tokenStr j=t
+--- token: 2
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr =1t
+--- token: 27
+- match lookahead.token=27 | t=27
+- state   4 | tokenLen 1 | tokenStr 11t
+- state 104 | tokenLen 2 | tokenStr 1;t
+--- token: 1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ;;t
+--- token: 26
+SYN: TE1--> 
+SYN: E1--> 
+SYN: L--> 
+- match lookahead.token=26 | t=26
+- state 201 | tokenLen 1 | tokenStr 
+;t
+- state 201 | tokenLen 1 | tokenStr  ;t
+- state 201 | tokenLen 1 | tokenStr  ;t
+- state   5 | tokenLen 1 | tokenStr w;t
+- state   5 | tokenLen 2 | tokenStr wht
+- state   5 | tokenLen 3 | tokenStr whi
+- state   5 | tokenLen 4 | tokenStr whil
+- state   5 | tokenLen 5 | tokenStr while
+- state 105 | tokenLen 6 | tokenStr while(
+--- token: 60
+SYN: S-->while(B) {S} S
+- match lookahead.token=60 | t=60
+- state 205 | tokenLen 1 | tokenStr (hile
+--- token: 21
+- match lookahead.token=21 | t=21
+- state   5 | tokenLen 1 | tokenStr ihile
+- state 105 | tokenLen 2 | tokenStr i<ile
+--- token: 2
+SYN: B-->TB B1
+SYN: TB-->FB TB1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr <
+- state 101 | tokenLen 2 | tokenStr <6ile
+--- token: 11
+SYN: TE1--> 
+SYN: E1--> 
+SYN: FB-->E<E
+- match lookahead.token=11 | t=11
+- state   4 | tokenLen 1 | tokenStr 66ile
+- state 104 | tokenLen 2 | tokenStr 6)ile
+--- token: 1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ))ile
+--- token: 22
+SYN: TE1--> 
+SYN: E1--> 
+SYN: TB1--> 
+SYN: B1--> 
+- match lookahead.token=22 | t=22
+- state 205 | tokenLen 1 | tokenStr {)ile
+--- token: 23
+- match lookahead.token=23 | t=23
+- state 201 | tokenLen 1 | tokenStr 
+)ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state   5 | tokenLen 1 | tokenStr j)ile
+- state 105 | tokenLen 2 | tokenStr j=ile
+--- token: 2
+SYN: S-->A S
+SYN: A-->id=E;
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr =jile
+--- token: 27
+- match lookahead.token=27 | t=27
+- state   5 | tokenLen 1 | tokenStr jjile
+- state 105 | tokenLen 2 | tokenStr j+ile
+--- token: 2
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   3 | tokenLen 1 | tokenStr +
+- state 103 | tokenLen 2 | tokenStr +iile
+--- token: 17
+SYN: TE1--> 
+SYN: E1-->+TE E1
+- match lookahead.token=17 | t=17
+- state   5 | tokenLen 1 | tokenStr iiile
+- state 105 | tokenLen 2 | tokenStr i;ile
+--- token: 2
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state 205 | tokenLen 1 | tokenStr ;
+--- token: 26
+SYN: TE1--> 
+SYN: E1--> 
+- match lookahead.token=26 | t=26
+- state 201 | tokenLen 1 | tokenStr 
+
+- state 201 | tokenLen 1 | tokenStr  
+- state 201 | tokenLen 1 | tokenStr  
+- state 201 | tokenLen 1 | tokenStr  
+- state 201 | tokenLen 1 | tokenStr  
+- state   5 | tokenLen 1 | tokenStr i
+- state   5 | tokenLen 2 | tokenStr ifile
+- state 105 | tokenLen 3 | tokenStr if(le
+--- token: 58
+SYN: S-->if (B) {S} [else {S}] S
+- match lookahead.token=58 | t=58
+- state 205 | tokenLen 1 | tokenStr (f
+--- token: 21
+- match lookahead.token=21 | t=21
+- state   5 | tokenLen 1 | tokenStr jf
+- state 105 | tokenLen 2 | tokenStr j=
+--- token: 2
+SYN: B-->TB B1
+SYN: TB-->FB TB1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr ==
+--- token: 15
+SYN: TE1--> 
+SYN: E1--> 
+SYN: FB-->E==E
+- match lookahead.token=15 | t=15
+- state   4 | tokenLen 1 | tokenStr 7=
+- state 104 | tokenLen 2 | tokenStr 7)
+--- token: 1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ))
+--- token: 22
+SYN: TE1--> 
+SYN: E1--> 
+SYN: TB1--> 
+SYN: B1--> 
+--- if : 0
+- match lookahead.token=22 | t=22
+- state 205 | tokenLen 1 | tokenStr {)
+--- token: 23
+- match lookahead.token=23 | t=23
+- state 201 | tokenLen 1 | tokenStr 
+)
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state   5 | tokenLen 1 | tokenStr c)
+- state   5 | tokenLen 2 | tokenStr co
+- state   5 | tokenLen 3 | tokenStr conle
+- state   5 | tokenLen 4 | tokenStr conte
+- state   5 | tokenLen 5 | tokenStr conti
+- state   5 | tokenLen 6 | tokenStr contin
+- state   5 | tokenLen 7 | tokenStr continu
+- state   5 | tokenLen 8 | tokenStr continue
+- state 105 | tokenLen 9 | tokenStr continue;
+--- token: 63
+SYN: S-->while(B) {S continue;} S
+- match lookahead.token=63 | t=63
+- state 205 | tokenLen 1 | tokenStr ;ontinue
+--- token: 26
+- match lookahead.token=26 | t=26
+- state 201 | tokenLen 1 | tokenStr 
+ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 205 | tokenLen 1 | tokenStr }ontinue
+--- token: 24
+- match lookahead.token=24 | t=24
+- state 201 | tokenLen 1 | tokenStr 
+ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state   5 | tokenLen 1 | tokenStr iontinue
+- state 105 | tokenLen 2 | tokenStr i=ntinue
+--- token: 2
+SYN: S-->A S
+SYN: A-->id=E;
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr =intinue
+--- token: 27
+- match lookahead.token=27 | t=27
+- state   5 | tokenLen 1 | tokenStr iintinue
+- state 105 | tokenLen 2 | tokenStr i+ntinue
+--- token: 2
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   3 | tokenLen 1 | tokenStr +
+- state 103 | tokenLen 2 | tokenStr +1ntinue
+--- token: 17
+SYN: TE1--> 
+SYN: E1-->+TE E1
+- match lookahead.token=17 | t=17
+- state   4 | tokenLen 1 | tokenStr 11ntinue
+- state 104 | tokenLen 2 | tokenStr 1;ntinue
+--- token: 1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ;;ntinue
+--- token: 26
+SYN: TE1--> 
+SYN: E1--> 
+- match lookahead.token=26 | t=26
+- state 201 | tokenLen 1 | tokenStr 
+;ntinue
+- state 201 | tokenLen 1 | tokenStr  ;ntinue
+- state 201 | tokenLen 1 | tokenStr  ;ntinue
+- state 205 | tokenLen 1 | tokenStr };ntinue
+--- token: 24
+SYN: S--> 
+- match lookahead.token=24 | t=24
+- state 201 | tokenLen 1 | tokenStr 
+;ntinue
+- state 201 | tokenLen 1 | tokenStr  ;ntinue
+- state 201 | tokenLen 1 | tokenStr  ;ntinue
+- state   5 | tokenLen 1 | tokenStr s;ntinue
+- state   5 | tokenLen 2 | tokenStr shntinue
+- state   5 | tokenLen 3 | tokenStr shotinue
+- state   5 | tokenLen 4 | tokenStr showinue
+- state 105 | tokenLen 5 | tokenStr show(nue
+--- token: 61
+- state   5 | tokenLen 1 | tokenStr whow
+- state   5 | tokenLen 2 | tokenStr whow
+- state   5 | tokenLen 3 | tokenStr whiw
+- state   5 | tokenLen 4 | tokenStr whil
+- state   5 | tokenLen 5 | tokenStr whilenue
+- state 105 | tokenLen 6 | tokenStr while(ue
+--- token: 60
+SYN: S-->while(B) {S} S
+- match lookahead.token=60 | t=60
+- state 205 | tokenLen 1 | tokenStr (hile
+--- token: 21
+- match lookahead.token=21 | t=21
+- state   5 | tokenLen 1 | tokenStr ihile
+- state 105 | tokenLen 2 | tokenStr i<ile
+--- token: 2
+SYN: B-->TB B1
+SYN: TB-->FB TB1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr <
+- state 101 | tokenLen 2 | tokenStr <6ile
+--- token: 11
+SYN: TE1--> 
+SYN: E1--> 
+SYN: FB-->E<E
+- match lookahead.token=11 | t=11
+- state   4 | tokenLen 1 | tokenStr 66ile
+- state 104 | tokenLen 2 | tokenStr 6)ile
+--- token: 1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ))ile
+--- token: 22
+SYN: TE1--> 
+SYN: E1--> 
+SYN: TB1--> 
+SYN: B1--> 
+- match lookahead.token=22 | t=22
+- state 205 | tokenLen 1 | tokenStr {)ile
+--- token: 23
+- match lookahead.token=23 | t=23
+- state 201 | tokenLen 1 | tokenStr 
+)ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state   5 | tokenLen 1 | tokenStr j)ile
+- state 105 | tokenLen 2 | tokenStr j=ile
+--- token: 2
+SYN: S-->A S
+SYN: A-->id=E;
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr =jile
+--- token: 27
+- match lookahead.token=27 | t=27
+- state   5 | tokenLen 1 | tokenStr jjile
+- state 105 | tokenLen 2 | tokenStr j+ile
+--- token: 2
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   3 | tokenLen 1 | tokenStr +
+- state 103 | tokenLen 2 | tokenStr +iile
+--- token: 17
+SYN: TE1--> 
+SYN: E1-->+TE E1
+- match lookahead.token=17 | t=17
+- state   5 | tokenLen 1 | tokenStr iiile
+- state 105 | tokenLen 2 | tokenStr i;ile
+--- token: 2
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state 205 | tokenLen 1 | tokenStr ;
+--- token: 26
+SYN: TE1--> 
+SYN: E1--> 
+- match lookahead.token=26 | t=26
+- state 201 | tokenLen 1 | tokenStr 
+
+- state 201 | tokenLen 1 | tokenStr  
+- state 201 | tokenLen 1 | tokenStr  
+- state 201 | tokenLen 1 | tokenStr  
+- state 201 | tokenLen 1 | tokenStr  
+- state   5 | tokenLen 1 | tokenStr i
+- state   5 | tokenLen 2 | tokenStr ifile
+- state 105 | tokenLen 3 | tokenStr if(le
+--- token: 58
+SYN: S-->if (B) {S} [else {S}] S
+- match lookahead.token=58 | t=58
+- state 205 | tokenLen 1 | tokenStr (f
+--- token: 21
+- match lookahead.token=21 | t=21
+- state   5 | tokenLen 1 | tokenStr jf
+- state 105 | tokenLen 2 | tokenStr j=
+--- token: 2
+SYN: B-->TB B1
+SYN: TB-->FB TB1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr ==
+--- token: 15
+SYN: TE1--> 
+SYN: E1--> 
+SYN: FB-->E==E
+- match lookahead.token=15 | t=15
+- state   4 | tokenLen 1 | tokenStr 7=
+- state 104 | tokenLen 2 | tokenStr 7)
+--- token: 1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ))
+--- token: 22
+SYN: TE1--> 
+SYN: E1--> 
+SYN: TB1--> 
+SYN: B1--> 
+--- if : 0
+- match lookahead.token=22 | t=22
+- state 205 | tokenLen 1 | tokenStr {)
+--- token: 23
+- match lookahead.token=23 | t=23
+- state 201 | tokenLen 1 | tokenStr 
+)
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state   5 | tokenLen 1 | tokenStr c)
+- state   5 | tokenLen 2 | tokenStr co
+- state   5 | tokenLen 3 | tokenStr conle
+- state   5 | tokenLen 4 | tokenStr conte
+- state   5 | tokenLen 5 | tokenStr conti
+- state   5 | tokenLen 6 | tokenStr continue
+- state   5 | tokenLen 7 | tokenStr continue
+- state   5 | tokenLen 8 | tokenStr continue
+- state 105 | tokenLen 9 | tokenStr continue;
+--- token: 63
+SYN: S-->while(B) {S continue;} S
+- match lookahead.token=63 | t=63
+- state 205 | tokenLen 1 | tokenStr ;ontinue
+--- token: 26
+- match lookahead.token=26 | t=26
+- state 201 | tokenLen 1 | tokenStr 
+ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 205 | tokenLen 1 | tokenStr }ontinue
+--- token: 24
+- match lookahead.token=24 | t=24
+- state 201 | tokenLen 1 | tokenStr 
+ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state   5 | tokenLen 1 | tokenStr iontinue
+- state 105 | tokenLen 2 | tokenStr i=ntinue
+--- token: 2
+SYN: S-->A S
+SYN: A-->id=E;
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr =intinue
+--- token: 27
+- match lookahead.token=27 | t=27
+- state   5 | tokenLen 1 | tokenStr iintinue
+- state 105 | tokenLen 2 | tokenStr i+ntinue
+--- token: 2
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   3 | tokenLen 1 | tokenStr +
+- state 103 | tokenLen 2 | tokenStr +1ntinue
+--- token: 17
+SYN: TE1--> 
+SYN: E1-->+TE E1
+- match lookahead.token=17 | t=17
+- state   4 | tokenLen 1 | tokenStr 11ntinue
+- state 104 | tokenLen 2 | tokenStr 1;ntinue
+--- token: 1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ;;ntinue
+--- token: 26
+SYN: TE1--> 
+SYN: E1--> 
+- match lookahead.token=26 | t=26
+- state 201 | tokenLen 1 | tokenStr 
+;ntinue
+- state 201 | tokenLen 1 | tokenStr  ;ntinue
+- state 201 | tokenLen 1 | tokenStr  ;ntinue
+- state 205 | tokenLen 1 | tokenStr };ntinue
+--- token: 24
+SYN: S--> 
+- match lookahead.token=24 | t=24
+- state 201 | tokenLen 1 | tokenStr 
+;ntinue
+- state 201 | tokenLen 1 | tokenStr  ;ntinue
+- state 201 | tokenLen 1 | tokenStr  ;ntinue
+- state   5 | tokenLen 1 | tokenStr s;ntinue
+- state   5 | tokenLen 2 | tokenStr shntinue
+- state   5 | tokenLen 3 | tokenStr shotinue
+- state   5 | tokenLen 4 | tokenStr showinue
+- state 105 | tokenLen 5 | tokenStr show(nue
+--- token: 61
+- state   5 | tokenLen 1 | tokenStr whow
+- state   5 | tokenLen 2 | tokenStr whow
+- state   5 | tokenLen 3 | tokenStr whiw
+- state   5 | tokenLen 4 | tokenStr whil
+- state   5 | tokenLen 5 | tokenStr whilenue
+- state 105 | tokenLen 6 | tokenStr while(ue
+--- token: 60
+SYN: S-->while(B) {S} S
+- match lookahead.token=60 | t=60
+- state 205 | tokenLen 1 | tokenStr (hile
+--- token: 21
+- match lookahead.token=21 | t=21
+- state   5 | tokenLen 1 | tokenStr ihile
+- state 105 | tokenLen 2 | tokenStr i<ile
+--- token: 2
+SYN: B-->TB B1
+SYN: TB-->FB TB1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr <
+- state 101 | tokenLen 2 | tokenStr <6ile
+--- token: 11
+SYN: TE1--> 
+SYN: E1--> 
+SYN: FB-->E<E
+- match lookahead.token=11 | t=11
+- state   4 | tokenLen 1 | tokenStr 66ile
+- state 104 | tokenLen 2 | tokenStr 6)ile
+--- token: 1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ))ile
+--- token: 22
+SYN: TE1--> 
+SYN: E1--> 
+SYN: TB1--> 
+SYN: B1--> 
+- match lookahead.token=22 | t=22
+- state 205 | tokenLen 1 | tokenStr {)ile
+--- token: 23
+- match lookahead.token=23 | t=23
+- state 201 | tokenLen 1 | tokenStr 
+)ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state 201 | tokenLen 1 | tokenStr  )ile
+- state   5 | tokenLen 1 | tokenStr j)ile
+- state 105 | tokenLen 2 | tokenStr j=ile
+--- token: 2
+SYN: S-->A S
+SYN: A-->id=E;
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr =jile
+--- token: 27
+- match lookahead.token=27 | t=27
+- state   5 | tokenLen 1 | tokenStr jjile
+- state 105 | tokenLen 2 | tokenStr j+ile
+--- token: 2
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   3 | tokenLen 1 | tokenStr +
+- state 103 | tokenLen 2 | tokenStr +iile
+--- token: 17
+SYN: TE1--> 
+SYN: E1-->+TE E1
+- match lookahead.token=17 | t=17
+- state   5 | tokenLen 1 | tokenStr iiile
+- state 105 | tokenLen 2 | tokenStr i;ile
+--- token: 2
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state 205 | tokenLen 1 | tokenStr ;
+--- token: 26
+SYN: TE1--> 
+SYN: E1--> 
+- match lookahead.token=26 | t=26
+- state 201 | tokenLen 1 | tokenStr 
+
+- state 201 | tokenLen 1 | tokenStr  
+- state 201 | tokenLen 1 | tokenStr  
+- state 201 | tokenLen 1 | tokenStr  
+- state 201 | tokenLen 1 | tokenStr  
+- state   5 | tokenLen 1 | tokenStr i
+- state   5 | tokenLen 2 | tokenStr ifile
+- state 105 | tokenLen 3 | tokenStr if(le
+--- token: 58
+SYN: S-->if (B) {S} [else {S}] S
+- match lookahead.token=58 | t=58
+- state 205 | tokenLen 1 | tokenStr (f
+--- token: 21
+- match lookahead.token=21 | t=21
+- state   5 | tokenLen 1 | tokenStr jf
+- state 105 | tokenLen 2 | tokenStr j=
+--- token: 2
+SYN: B-->TB B1
+SYN: TB-->FB TB1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->id
+- match lookahead.token=2 | t=2
+- state   1 | tokenLen 1 | tokenStr =
+- state 101 | tokenLen 2 | tokenStr ==
+--- token: 15
+SYN: TE1--> 
+SYN: E1--> 
+SYN: FB-->E==E
+- match lookahead.token=15 | t=15
+- state   4 | tokenLen 1 | tokenStr 7=
+- state 104 | tokenLen 2 | tokenStr 7)
+--- token: 1
+SYN: E-->TE E1
+SYN: TE-->F TE1
+SYN: F-->num
+- match lookahead.token=1 | t=1
+- state 205 | tokenLen 1 | tokenStr ))
+--- token: 22
+SYN: TE1--> 
+SYN: E1--> 
+SYN: TB1--> 
+SYN: B1--> 
+--- if : 1
+- match lookahead.token=22 | t=22
+- state 205 | tokenLen 1 | tokenStr {)
+--- token: 23
+- match lookahead.token=23 | t=23
+- state 201 | tokenLen 1 | tokenStr 
+)
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state 201 | tokenLen 1 | tokenStr  )
+- state   5 | tokenLen 1 | tokenStr c)
+- state   5 | tokenLen 2 | tokenStr co
+- state   5 | tokenLen 3 | tokenStr conle
+- state   5 | tokenLen 4 | tokenStr conte
+- state   5 | tokenLen 5 | tokenStr conti
+- state   5 | tokenLen 6 | tokenStr continue
+- state   5 | tokenLen 7 | tokenStr continue
+- state   5 | tokenLen 8 | tokenStr continue
+- state 105 | tokenLen 9 | tokenStr continue;
+--- token: 63
+SYN: S-->while(B) {S continue;} S
+- match lookahead.token=63 | t=63
+- state 205 | tokenLen 1 | tokenStr ;ontinue
+--- token: 26
+- match lookahead.token=26 | t=26
+- state 201 | tokenLen 1 | tokenStr 
+ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 201 | tokenLen 1 | tokenStr  ontinue
+- state 205 | tokenLen 1 | tokenStr }ontinue
+--- token: 24
+- state 201 | tokenLen 1 | tokenStr �ontinue
+--- token: -1
+- match lookahead.token=-1 | t=24
+NAME:main, TYPE:1, 
+NAME:i, TYPE:2, VALUE:3
+NAME:j, TYPE:2, VALUE:7
