@@ -847,6 +847,14 @@ static EXPVAL Prod_F()
 		val.type=ID_INT;
 		val.val.intval=bval;
 	}
+	else if (lookahead.token==SYN_ADD || lookahead.token==SYN_SUB)
+	{
+		#if defined(AnaTypeSyn)
+		printf("SYN: F-->因为+-代表正负号所以是空\n");
+		#endif
+		val.type=ID_INT;
+		val.val.intval=0;
+	}
 	else
 		FreeExit();
 	return(val);
